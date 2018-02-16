@@ -1,0 +1,79 @@
+{
+    "name": "Resample Scalar/Vector/DWI Volume Docker",
+    "tool-version": "v0.0.1",
+    "command-line": "Slicer --launch ResampleScalarVectorDWIVolume [INPUT] [OUTPUT] [TRANSFORM] [INTERPOLATION] [CENTERED] >> [LOG] ",
+    "description": "Script to resample a volume",
+    "container-image": {
+        "entrypoint": false, 
+        "image": "docker.io/micheletgregory/slicer:4.8.1",
+        "type": "docker"
+    }, 
+    "inputs": [
+        {
+            "id": "input",
+            "name": "Input to resample",
+            "optional": false,
+            "type": "File",
+            "value-key": "[INPUT]"
+        },
+        {
+            "id": "output_filename",
+            "name": "Output Nifti filename",
+            "optional": false,
+            "type": "String",
+            "value-key": "[OUTPUT]"
+        },
+        {
+            "command-line-flag": "-f",
+            "id": "transform",
+            "name": "Transformation to apply",
+            "optional": false,
+            "type": "File",
+            "value-key": "[TRANSFORM]"
+        },
+        {
+            "command-line-flag": "-i",
+            "id": "interpolation",
+            "name": "Interpolation method",
+            "optional": false,
+            "type": "String",
+            "value-choices": [
+                "linear",
+                "nn",
+                "ws",
+                "bs"
+            ],
+            "value-key": "[INTERPOLATION]"
+        },
+        {
+            "command-line-flag": "--centered-transform",
+            "id": "centered_flag",
+            "name": "Centered flag",
+            "optional": true,
+            "type": "Flag",
+            "value-key": "[CENTERED]"
+        },
+        {
+            "id": "log_file_name",
+            "name": "log filename",
+            "optional": false,
+            "type": "String",
+            "value-key": "[LOG]"
+        }
+    ],
+    "output-files": [
+        {
+            "id": "log_file",
+            "name": "log file",
+            "optional": false,
+            "path-template": "[LOG]"
+        },
+        {
+            "id": "output",
+            "name": "Image resampled",
+            "optional": false,
+            "path-template": "[OUTPUT]"
+        }
+    ],
+    "schema-version": "0.5",
+}

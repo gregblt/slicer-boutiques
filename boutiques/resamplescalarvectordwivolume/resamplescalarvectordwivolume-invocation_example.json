@@ -1,0 +1,8 @@
+{
+    "input": "/media/gregory/Acer/Users/grego/Documents/CNI/Datasets/UConn_Gregory/Wolfson_cc_axonal-degen/sub-001/ses-01/sub-001_ses-01_MPRAGE.nii.gz",
+    "output_filename": "/media/gregory/Acer/Users/grego/Documents/CNI/Datasets/UConn_Gregory/Wolfson_cc_axonal-degen-results/sub-001/ses-01/sub-001_ses-01_rTMS_MPRAGE_2.nii.gz",
+    "centered_flag": true,
+    "transform": "/media/gregory/Acer/Users/grego/Documents/CNI/Datasets/UConn_Gregory/Wolfson_cc_axonal-degen/sub-001/ses-01/sub-001_ses-01_T1w-transform.h5",
+    "interpolation": "linear",
+    "log_file_name":"/media/gregory/Acer/Users/grego/Documents/CNI/Datasets/UConn_Gregory/Wolfson_cc_axonal-degen-results/sub-001/ses-01/sub-001_ses-01_rTMS_MPRAGE_2.log"
+}
