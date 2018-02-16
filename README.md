@@ -4,7 +4,7 @@
 
 The directory docker contains the dockerfile used to build the container with the Slicer4 installation
 
-The directory boutiques contains the boutiques descriptor for the tools
+The directory boutiques contains the boutiques descriptors for the tools
 
 ## Tools documentation
 
