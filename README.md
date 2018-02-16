@@ -1,2 +1,5 @@
 # slicer-boutiques
-Boutiques tool based on Slicer4 CLI modules
+[Boutiques](https://github.com/boutiques) tools based on Slicer4 CLI modules
+## The repository
+## Tools documentation
+[Documentation for the tools]()
