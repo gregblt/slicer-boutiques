@@ -17,5 +17,8 @@ RUN SLICER_URL="download.slicer.org/bitstream/738960" && \
 
 # Add Slicer to the path
 RUN echo "PATH=${PATH}:/opt/slicer/" >> ~/.bashrc
+RUN export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/slicer/lib/Slicer-4.8/cli-modules/
+# add src
+ADD ./src /src
 
 

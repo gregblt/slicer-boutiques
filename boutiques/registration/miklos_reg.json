@@ -1,0 +1,36 @@
+{
+  "name": "Simple Rigid Registration",
+  "tool-version": "v0.0.1",
+  "command-line": "/src/reg.sh [FIXED] [MOVING]",
+  "description": "Script to do a simple rigid registration",
+  "container-image": {
+    "entrypoint": false,
+    "image": "slicer",
+    "type": "docker"
+  },
+  "inputs": [
+    {
+      "id": "fixed",
+      "name": "Fixed",
+      "optional": false,
+      "type": "File",
+      "value-key": "[FIXED]"
+    },
+    {
+      "id": "moving",
+      "name": "Moving",
+      "optional": false,
+      "type": "File",
+      "value-key": "[MOVING]"
+    }
+  ],
+  "output-files": [
+    {
+      "id": "output",
+      "name": "Output",
+      "optional": false,
+      "path-template": "/output/output.nii.gz"
+    }
+  ],
+  "schema-version": "0.5"
+}
