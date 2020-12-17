@@ -17,4 +17,4 @@ cd /tmp/post
 tar -xvzf "$post"
 /src/dcm2niix -f post -o /tmp/input/ /tmp/post
 
-/opt/slicer/lib/Slicer-4.8/cli-modules/BRAINSFit --fixedVolume /tmp/input/pre.nii --movingVolume /tmp/input/post.nii   --useRigid --outputVolume "/output/output.nii.gz"
+/opt/slicer/lib/Slicer-4.8/cli-modules/BRAINSFit --fixedVolume /tmp/input/pre.nii --movingVolume /tmp/input/post.nii   --useRigid --outputVolume "/output/output.nii.gz" --outputTransform "/output/transform.hdf5"
