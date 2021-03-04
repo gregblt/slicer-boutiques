@@ -7,7 +7,7 @@ RUN apt-get install curl -y
 
 RUN apt-get install make gcc g++ libx11-dev libxt-dev libgl1-mesa-dev libglu1-mesa-dev libfontconfig-dev libxrender-dev libncurses5-dev -y
 
-RUN apt-get install libgstreamer-plugins-base0.10-dev -y
+#RUN apt-get install libgstreamer-plugins-base0.10-dev -y
 
 # Download slicer4.8.1
 
