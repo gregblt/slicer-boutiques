@@ -1,12 +1,16 @@
 #!/bin/sh
 
+
 # inputs
 pre=$1
 post=$2
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/slicer/lib/Slicer-4.8/cli-modules/
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/slicer/lib/Slicer-4.8/
 # If niftis
-if [ "${pre: -4}" == ".nii" ] || [ "${pre: -7}" == ".nii.gz" ]; then
+echo "${pre: -3}"
+nii="${pre: -3}"
+niigz="${pre: -6}"
+if [ $nii = "nii" ] || [ $niigz = "nii.gz" ]; then
   /opt/slicer/lib/Slicer-4.8/cli-modules/BRAINSFit --fixedVolume "$pre" --movingVolume "$post"   --useRigid --outputVolume "/output/output.nii.gz" --outputTransform "/output/transform.hdf5" --initializeTransformMode useGeometryAlign --samplingPercentage 0.1
 else
   mkdir /tmp/input
